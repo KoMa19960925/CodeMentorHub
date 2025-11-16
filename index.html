@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Mentor Hub- Software Engineer Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Code<span>Mentor</span>Hub</div>
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#" onclick="showPage('about')">About</a></li>
+                        <li><a href="#" onclick="showPage('coding')">Coding Topics</a></li>
+                        <li><a href="#" onclick="showPage('database')">Database</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn btn-login" onclick="showPage('login')">Login</button>
+                    <button class="btn btn-register" onclick="showPage('register')">Register</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <h1>Welcome to Coding Mentor Hub</h1>
+            <p>Your comprehensive resource for mastering software engineering concepts. Whether you're a beginner or an experienced developer, my platform provides structured learning paths for essential coding topics.</p>
+            
+            <h2>Featured Learning Paths</h2>
+            <div class="topics-grid">
+                <div class="topic-card" onclick="showPage('coding')">
+                    <h3>Frontend Development</h3>
+                    <p>Master HTML, CSS, and JavaScript to build interactive and responsive web applications.</p>
+                </div>
+                <div class="topic-card" onclick="showPage('coding')">
+                    <h3>Backend Development</h3>
+                    <p>Learn server-side programming, APIs, databases, and deployment strategies.</p>
+                </div>
+                <div class="topic-card" onclick="showPage('coding')">
+                    <h3>Data Structures & Algorithms</h3>
+                    <p>Essential computer science concepts for technical interviews and efficient coding.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Page -->
+        <section id="login" class="page">
+            <h1>Login to Your Account</h1>
+            <div class="form-container">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="#" onclick="showPage('register')">Register here</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Register Page -->
+        <section id="register" class="page">
+            <h1>Create an Account</h1>
+            <div class="form-container">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="registerName">Full Name</label>
+                        <input type="text" id="registerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email Address</label>
+                        <input type="email" id="registerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">Confirm Password</label>
+                        <input type="password" id="registerConfirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#" onclick="showPage('login')">Login here</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <h1>About Coding Study Hub</h1>
+            <p>Coding Study Hub is a comprehensive learning platform designed specifically for software engineers at all stages of their careers. Our mission is to provide structured, high-quality educational content that covers the essential topics every developer should master.</p>
+            
+            <h2>Our Approach</h2>
+            <p>We believe in learning by doing. Our platform combines theoretical knowledge with practical exercises, real-world projects, and coding challenges to ensure you can apply what you learn effectively.</p>
+            
+            <h2>What We Offer</h2>
+            <ul>
+                <li>Comprehensive learning paths for frontend, backend, and full-stack development</li>
+                <li>In-depth coverage of data structures, algorithms, and system design</li>
+                <li>Practical projects to build your portfolio</li>
+                <li>Interview preparation resources</li>
+                <li>Community support and mentorship opportunities</li>
+            </ul>
+            
+            <h2>Our Team</h2>
+            <p>Our content is created and reviewed by experienced software engineers from top tech companies, ensuring that you're learning industry-relevant skills and best practices.</p>
+        </section>
+
+        <!-- Coding Detail Page -->
+        <section id="coding" class="page">
+            <h1>Coding Topics for Software Engineers</h1>
+            <p>Explore our comprehensive curriculum designed to take you from beginner to advanced software engineer.</p>
+            
+            <h2>Frontend Development</h2>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3>HTML5</h3>
+                    <p>Learn semantic markup, forms, accessibility, and modern HTML features.</p>
+                </div>
+                <div class="topic-card">
+                    <h3>CSS3</h3>
+                    <p>Master layouts, responsive design, animations, and CSS frameworks.</p>
+                </div>
+                <div class="topic-card">
+                    <h3>JavaScript</h3>
+                    <p>Deep dive into ES6+, DOM manipulation, async programming, and modern JS patterns.</p>
+                </div>
+                <div class="topic-card">
+                    <h3>React.js</h3>
+                    <p>Build modern user interfaces with components, hooks, and state management.</p>
+                </div>
+            </div>
+            
+            <h2>Backend Development</h2>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3>Node.js</h3>
+                    <p>Server-side JavaScript, Express framework, and building RESTful APIs.</p>
+                </div>
+                <div class="topic-card">
+                    <h3>Python & Django</h3>
+                    <p>Python programming and building web applications with Django framework.</p>
+                </div>
+                <div class="topic-card">
+                    <h3>Java & Spring Boot</h3>
+                    <p>Enterprise application development with Java and Spring ecosystem.</p>
+                </div>
+                <div class="topic-card">
+                    <h3>API Design</h3>
+                    <p>REST principles, GraphQL, authentication, and API documentation.</p>
+                </div>
+            </div>
+            
+            <h2>Data Structures & Algorithms</h2>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3>Arrays & Strings</h3>
+                    <p>Fundamental data structures and common manipulation techniques.</p>
+                </div>
+                <div class="topic-card">
+                    <h3>Trees & Graphs</h3>
+                    <p>Hierarchical data structures and graph traversal algorithms.</p>
+                </div>
+                <div class="topic-card">
+                    <h3>Dynamic Programming</h3>
+                    <p>Solving complex problems by breaking them down into simpler subproblems.</p>
+                </div>
+                <div class="topic-card">
+                    <h3>Sorting & Searching</h3>
+                    <p>Efficient algorithms for organizing and retrieving data.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Database Page -->
+        <section id="database" class="page">
+            <h1>Database Technologies</h1>
+            <p>Understanding databases is crucial for software engineers. Explore different database technologies and when to use them.</p>
+            
+            <h2>Relational Databases</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Database</th>
+                        <th>Use Cases</th>
+                        <th>Key Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MySQL</td>
+                        <td>Web applications, E-commerce</td>
+                        <td>ACID compliance, High performance</td>
+                    </tr>
+                    <tr>
+                        <td>PostgreSQL</td>
+                        <td>Complex applications, Geospatial data</td>
+                        <td>Advanced data types, JSON support</td>
+                    </tr>
+                    <tr>
+                        <td>SQLite</td>
+                        <td>Mobile apps, Embedded systems</td>
+                        <td>Serverless, Zero configuration</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>NoSQL Databases</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Database</th>
+                        <th>Type</th>
+                        <th>Use Cases</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MongoDB</td>
+                        <td>Document</td>
+                        <td>Content management, Real-time analytics</td>
+                    </tr>
+                    <tr>
+                        <td>Redis</td>
+                        <td>Key-Value</td>
+                        <td>Caching, Session storage</td>
+                    </tr>
+                    <tr>
+                        <td>Cassandra</td>
+                        <td>Wide Column</td>
+                        <td>Time-series data, High write throughput</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>Database Concepts to Master</h2>
+            <ul>
+                <li>Normalization and Database Design</li>
+                <li>SQL Queries and Optimization</li>
+                <li>Indexing Strategies</li>
+                <li>Transactions and Concurrency Control</li>
+                <li>Database Security</li>
+                <li>Backup and Recovery</li>
+                <li>Database Migration Strategies</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Code<span>Study</span>Hub</div>
+                <div class="footer-links">
+                    <a href="#" onclick="showPage('home')">Home</a>
+                    <a href="#" onclick="showPage('about')">About</a>
+                    <a href="#" onclick="showPage('coding')">Coding Topics</a>
+                    <a href="#" onclick="showPage('database')">Database</a>
+                    <a href="#" onclick="showPage('login')">Login</a>
+                    <a href="#" onclick="showPage('register')">Register</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2023 Coding Study Hub. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
